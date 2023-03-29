@@ -26,7 +26,14 @@ internal class Program
         test.AddVideo(video3);
         video3 = new SayaTubeVideo("Avenger 10");
         test.AddVideo(video3);
+        video3.IncreasePlayCount(50000000);
+        video3.PrintVideoDetails();
+
         test.PrintAllVideoPlaycount();
+
+        SayaTubeUser test1 = new SayaTubeUser(null);
+        video3 = new SayaTubeVideo(null);
+        test.AddVideo(video3);
 
     }
 }
@@ -56,7 +63,7 @@ public class SayaTubeVideo
     {
         try
         {
-            if (i >= 250000000) throw new Exception("Melebihi limit angka");
+            if (i >= 25000000) throw new Exception("Melebihi limit angka");
             if (i < 0) throw new Exception("tidak boleh bilangan negatif");
             PlayCount = PlayCount + i;
         }
